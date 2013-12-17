@@ -1,4 +1,35 @@
-
+/**
+ *   Copyright (C) 2013 Ben Martin
+ *
+ *   Code for doing interesting things on Arduino.
+ *
+ *   This arduino code is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   libferris is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with libferris.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *   For more details see the COPYING file in the root directory of this
+ *   distribution.
+ *
+ ********************************************************************
+ *
+ * This library allows entire "messages" to be passed to the attiny84.
+ *
+ * It handles:
+ * 1) the USI SPI slave stuff
+ * 2) will set timedOut() to true after a preiod of no SPI messages
+ *    from the SPI master. You can use the to turn off things like attached
+ *    screen from the library client.
+ *   
+ */
 #include "Arduino.h"
 #include "SimpleMessagePassing5.h"
 
